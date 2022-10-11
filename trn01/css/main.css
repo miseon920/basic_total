@@ -1,0 +1,420 @@
+@charset "uft-8";
+
+:root {
+    --red: #dc3545;
+    --gc: #ddd;
+    --wc: #f8f9fa;
+    --dc: #000;
+}
+
+/*
+    *CSS 변수 만들기
+    :root{
+        --red : #dc3545;
+        --blue : #007bff;
+    }
+    
+
+    *CSS 변수 사용하기
+    .box{
+        background-color:var(--red);
+    }
+    ※ie에서는 먹지않음
+    EX)
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13,110,253;
+    --bs-secondary-rgb: 108,117,125;
+    --bs-success-rgb: 25,135,84;
+    --bs-info-rgb: 13,202,240;
+    --bs-warning-rgb: 255,193,7;
+    --bs-danger-rgb: 220,53,69;
+    --bs-light-rgb: 248,249,250;
+    --bs-dark-rgb: 33,37,41;
+    --bs-white-rgb: 255,255,255;
+    --bs-black-rgb: 0,0,0;
+    --bs-body-color-rgb: 33,37,41;
+    --bs-body-bg-rgb: 255,255,255;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+*/
+html {
+    font-size: 20px;
+}
+
+body {
+    font-size: 0.8rem;
+}
+
+/*
+*em과 rem
+상대(relative) 단위란 고정되지 않고 어떤 기준에 따라서 유동적으로 바뀔 수 있는 길이를 나타내는 단위입니다. 본 포스팅에서 다룰 em과 rem을 포함해 %, vw, vh 등이 대표적인 CSS의 상대 단위입니다.
+
+*em과 rem의 차이점
+em과 rem 단위의 기준은 font-size 속성 값이라고 했는데, 정확히 어디에 있는 font-size 속성 값인지에 따라 차이가 발생합니다. em의 경우, 해당 단위가 사용되고 있는 요소의 font-size 속성 값이 기준이 됩니다. 반면에 rem에서 r은 root, 즉 최상위 요소를font-size 속성 값 의미합니다. HTML에서 최상위 요소는 <html> 입니다. 따라서 rem 경우, html 요소의 font-size 속성 값이 기준이 됩니다.
+*/
+
+.wrap .top_banner {
+    border-bottom: 1px solid var(--gc);
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+    border-top: 3px solid var(--red);
+}
+
+.wrap .top_banner .container {
+    display: flex;
+    justify-content: flex-end;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrap .top_banner .container li {
+    border-right: 1px solid var(--gc);
+}
+
+.wrap .top_banner .container li:first-child {
+    padding: 0 10px;
+}
+
+.wrap .top_banner .container li a {
+    display: block;
+    padding: 0 10px;
+}
+
+.header .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    line-height: 5rem;
+}
+
+.header .container h1 a {
+    display: block;
+}
+
+.header .container h1 img {
+    width: 300px;
+}
+
+.header nav {
+    margin-left: auto;
+}
+
+.header nav>ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header nav>ul a {
+    display: block;
+    font-size: 0.85rem;
+}
+
+.header nav>ul li {
+    position: relative;
+}
+
+.header nav>ul li~li:after {
+    /*li~li li의 형제들*/
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 50% auto auto -0.75rem;
+    width: 1px;
+    height: 0.6rem;
+    background: var(--gc);
+    transform: translateY(-50%);
+}
+
+.top_link a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.top_link i {
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    background: var(--gc);
+    border-radius: 3px;
+    margin-left: 1.5rem;
+}
+
+/*visual*/
+/*.main_slicder img {
+    width: 100%;
+}
+
+.main_slicder figure.on img {
+    transform: scale(1.2);
+    transition: 6s;
+}*/
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual .slogan {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    /*left: 50%;
+    top: 50%;*/
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    text-align: right;
+    text-shadow: 0 0 2px var(--dc);
+    z-index: 1;
+}
+
+.main_visual .slogan h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--wc);
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.main_visual .slogan p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--wc);
+    line-height: 1.4;
+    overflow: hidden;
+}
+
+.main_visual .slogan h2::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 2px;
+    background: var(--wc);
+    margin: 2rem 0 0 auto;
+}
+
+/*.test_bg {
+    background: #f00 url(../img/main_bg01.jpg)no-repeat center/cover;
+    -색상 url() 반복 fixed(속성제거가능) 위치/size
+    -background-attachment는 ios 사용불가(fixed) 
+    height: 300px;
+    margin-bottom: 1000px;
+}*/
+.main_visual:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/pt-bg04.png);
+}
+
+.main_visual figure {
+    height: 30rem;
+    transition: 2s;
+}
+
+.main_visual .item01 {
+    background: url(../img/main_bg01.jpg)no-repeat center/100%;
+}
+
+.main_visual .item02 {
+    background: url(../img/main_bg02.jpg)no-repeat center/100%;
+}
+
+.main_visual .item03 {
+    background: url(../img/main_bg03.jpg)no-repeat center/100%;
+}
+
+.main_visual figure.on {
+    background-size: 150%;
+}
+
+.content {
+    padding: 100px 0;
+}
+
+.content .container {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.content figure {
+    flex: 1;
+}
+
+.content figure img {
+    transition: all 0.5s;
+}
+
+.content .box {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.content figure:hover img {
+    transform: scale(1.5);
+}
+
+.content strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.product {
+    border-top: 1px solid var(--gc);
+    padding: 30px 0;
+}
+
+.product .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.product .container .left {
+    flex: 2;
+}
+
+.product .container .left ul {
+    display: flex;
+    gap: 10px;
+}
+
+.product .container .right {
+    flex: 1;
+    border-left: 1px solid var(--gc);
+    line-height: 1.4;
+    padding: 15px 0 0 30px;
+}
+
+.product .tel {
+    border-bottom: 1px solid var(--red);
+    margin-bottom: 15px;
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.customer {
+    display: flex;
+}
+
+.customer>div {
+    flex: 1;
+}
+
+.customer .left {
+    text-align: right;
+    background: url(../img/main_banner01.jpg)no-repeat center/cover;
+}
+
+.customer .right {
+    background: url(../img/main_banner02.jpg)no-repeat center/cover;
+    border-left: 1px solid var(--gc);
+}
+
+.customer>div a {
+    display: block;
+    color: #fff;
+    text-shadow: 0 0 3px var(--dc);
+    padding: 50px 40px;
+    background: url(../img/pt-bg01.png);
+}
+
+.customer>div a h3 {
+    font-size: 31px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.customer>div a p {
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.footer {
+    padding: 30px 0 50px 0;
+    font-size: 13px;
+}
+
+.footer .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .logo {
+    flex: 1;
+}
+
+.footer address {
+    flex: 4;
+    font-style: normal;
+    padding-top: 15px;
+}
+
+.footer address ul {
+    margin-bottom: 5px;
+}
+
+.footer address ul li {
+    display: inline-block;
+}
+
+.footer address ul li~li:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background: var(--gc);
+    margin: 0 10px;
+}

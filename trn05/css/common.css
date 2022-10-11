@@ -1,0 +1,368 @@
+@charset "utf-8";
+header {
+  text-align: center;
+  line-height: 100px;
+}
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+header nav {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+header.on nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  border-top: 0;
+  transition: all 0.5s;
+}
+header nav ul {
+  display: flex;
+  line-height: normal;
+  justify-content: space-between;
+}
+header nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+}
+header .right_lnb {
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  line-height: normal;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  visibility: hidden;
+  transition: all 0.5s;
+  opacity: 0;
+}
+header .right_lnb.on {
+  bottom: 100px;
+  visibility: visible;
+  opacity: 1;
+}
+header .right_lnb li {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+}
+.slick-arrow {
+  position: absolute;
+  z-index: 1;
+  font-size: 0;
+  border: 0;
+  background: transparent;
+  width: 68px;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.4) url(../img/arrow.png) no-repeat 0;
+  top: 50%;
+}
+.slick-prev {
+  left: 0;
+  transform: translateY(-50%) rotateY(180deg);
+}
+.slick-next {
+  right: 0;
+  transform: translateY(-50%);
+}
+.slick-slide img {
+  width: 100%;
+}
+.visual_slider figure {
+  position: relative;
+}
+.visual_tit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+  text-align: right;
+  text-shadow: 0 0 3px #000;
+}
+.visual_tit h2 {
+  font-size: 40px;
+  letter-spacing: -0.05em;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+.visual_tit p span {
+  display: block;
+  font-size: 15px;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 100px;
+  text-align: right;
+  max-width: 1200px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slick-dots li {
+  display: inline-block;
+  font-size: 0;
+  width: 100px;
+  height: 4px;
+  position: relative;
+  background: #fff;
+}
+.slick-dots li button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0;
+  border: 0;
+  width: 0;
+  height: 100%;
+  background: #fff;
+}
+.slick-dots li.check button {
+  width: 100%;
+  background: #222;
+  transition: width 0.5s;
+}
+section:not(.visual) {
+  padding: 100px 0;
+}
+h2.con_tit {
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.tit_en {
+  letter-spacing: 0.35em;
+}
+.product_box > ul {
+  display: flex;
+  gap: 30px;
+}
+.product_box > ul li {
+  width: 25%;
+}
+.item_img {
+  position: relative;
+  padding-bottom: 95%;
+}
+.item_img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.item_txt {
+  text-align: center;
+  padding-top: 15px;
+}
+.item_txt dt {
+  font-size: 17px;
+  color: #000;
+  letter-spacing: -0.04em;
+}
+.item_txt dl dd span {
+  display: block;
+  font-size: 15px;
+  color: #222;
+  line-height: 1.4;
+}
+.item_txt dl dd:nth-of-type(1) {
+  padding: 10px 0;
+}
+.product_box .item_txt dl dd:nth-of-type(2) {
+  font-size: 18px;
+  color: #e2c597;
+}
+.ysl_bg {
+  background: url(../img/ysl_bg.jpg) no-repeat center top/cover fixed;
+  text-align: right;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+.ysl_bg h2 {
+  text-align: right;
+}
+section.pt_0 {
+  padding-top: 0;
+}
+.grid {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.grid_bg {
+  position: relative;
+}
+
+.grid-item {
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  max-width: 280px;
+  width: 25%;
+}
+
+.grid-item .grid_border {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  display: block;
+}
+
+.grid-item img {
+  max-width: 100%;
+}
+
+.grid_head {
+  padding: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.grid_head div.ghead_top > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.grid_head .grid_himg {
+  width: 40px;
+}
+
+.grid_head .grid_himg > div {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 100%;
+  height: 40px;
+}
+
+.grid_head .grid_htit span {
+  display: block;
+  line-height: 1;
+}
+
+.grid_head .grid_date {
+  padding-top: 5px;
+  font-size: 12px;
+  color: #cac9cd;
+  font-weight: 300;
+}
+
+.grid_head .grid_himg img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid_head .grid_htit {
+  font-size: 16px;
+  padding-left: 10px;
+  width: calc(100% - 40px);
+}
+
+.grid_content .grid_ctxt {
+  padding: 15px 10px;
+  font-size: 14px;
+}
+.grid_cimg {
+  border-bottom: 1px solid #e6e6e6;
+  text-align: center;
+}
+.event .inner > div ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.event .inner > div ul li:nth-child(odd) {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.event .inner > div ul li:nth-child(3) {
+  margin-top: -190px;
+}
+.event .inner > div ul li:nth-child(even) {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.event .inner > div ul li.in-effect:nth-child(odd) {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.event .inner > div ul li.in-effect:nth-child(even) {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s;
+}
+.event .inner > div ul li:last-child {
+  padding-top: 50px;
+}
+.event a {
+  display: block;
+  padding-left: 50px;
+  position: relative;
+}
+.event h3 {
+  font-size: 19px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(270deg) translate(-95%, 100%);
+  transform-origin: 0;
+}
+.event .con_txt {
+  padding-top: 30px;
+}
+.event a span {
+  display: block;
+  color: #222;
+}
+footer {
+  padding: 30px 0 60px;
+  background: #000;
+  color: #cac9cd;
+  font-size: 14px;
+}
+footer ul li {
+  display: inline-block;
+  padding-right: 10px;
+  line-height: 1.5;
+}
+footer ul li:last-child {
+  padding-right: 0;
+}
+footer .copy {
+  padding-top: 30px;
+}
+/* @media (max-width:1200px) {
+  .grid-item {
+    width: calc(33.33% - 10px);
+    max-width: unset;
+  }
+}
+
+@media (max-width:991px) {
+  .grid-item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width:767px) {
+  .grid_head {
+    padding: 10px;
+  }
+}
+
+@media (max-width:480px) {
+  .grid-item {
+    width: 100%;
+  }
+} */

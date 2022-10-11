@@ -1,0 +1,73 @@
+#그래픽 사용자 인터페이스(graphical user interface, GUI)는
+사용자가 편리하게 사용할 수 있도록 입출력 등의 기능을 알기 쉬운 아이콘 따위의 그래픽으로 나타낸 것이다.
+
+#문자(콘솔) 사용자 인터페이스(character user interface,CUI): 그래픽 사용자 인터페이스의 이전판
+
+#Node Package Manager(혹은 Node Package Module)의 줄임말로써 
+Python의 pip나 Ruby의 gem처럼 Node.js의 패키지를 관리할 수 있는 도구이다. 
+또한 npm을 사용하여 패키지를 공유하는 온라인 패키지 저장소의 이름이기도 하다(packge manager- 관리)
+
+
+#npx(packge runner 실행)
+npm에서 제공해주는 하나의 도구입니다.
+따라서 npm@5.2.0 이상 버전만 깔려 있다면 npx 명령어를 사용할 수 있습니다.
+
+패키지를 다운 받았다면, node-modulus 라는 폴더가 생겨야 하는데,
+npx 이후에는 마치 node 프로젝트를 방금 시작한 것처럼 package.json 만이 존재합니다.
+
+#깃다운
+1.깃다운 후 폴더에 깃을 만든 후 폴더 내에서 숨김항목 확인하기
+2.소스제어에서 깃허브에 게시하기 클릭
+*깃허브에서 만들시 클론으로 복사하여 사용함
+예)git clone https://github.com/닉네임/Repository이름 - 깃클론생성
+https://github.com/miseon920/miseon920.github.io
+3.터미널등에서 푸쉬 
+#폴더가 다를경우 로컬폴더에서 원격 저장소 연결해 주기
+git remote add origin main
+
+1. git add .입력 
+2. git commit -m "init git"  (""사이에는 날짜를 넣어도됨)
+3. git push
+
+#로컬 경로에서 브런치를 메인으로 변경하기
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+
+#로컬에서 깃으로 
+1. 로컬 폴더 생성, 이동
+cd 로 이동 또는 로컬폴더에서 마우스 우클릭-> git bash here
+2. 이미 레포지토리에 내용이 있는경우 git clone 
+2-1. 아닌경우 레포지토리 생성 후 git remote 
+3. git레파지토리의 폴더 확인 ls
+4. 폴더로 이동 cd 
+5. 원하는 파일 생성 vi helloworld.c 
+6. git add , git commit , git push origin main
+[https://chasonghui.tistory.com/44 참고]
+
+*깃폴더가 접근금지가 되어있을때
+해동 폴더로 가서 
+git rm --cached . -rf
+상위 폴더로 가서 다시 푸쉬를 진행한다
+
+#깃폴더 삭제
+git rm --cached -r 폴더명
+
+#깃파일 삭제 
+git rm --cached -r 파일명 또는 git rm --cached 파일명 
+
+*폴더나 파일을 삭제 후 커밋을 꼭 해야줘야함
+commit , push
+
+#리액트
+노드js 설치후
+터미널에
+1.node -v
+2.npm -v
+3.npx create-react-app project00 [프로젝트명]
+y
+4.cd project00 [project00] 
+5.npm start
+-터미널에서 새로 터미널시작한땐 ctrl + c
+-리액트는 모듈화가 됨

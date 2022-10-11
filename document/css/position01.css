@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.popup {
+    width: 450px;
+    height: 350px;
+    background: pink;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}

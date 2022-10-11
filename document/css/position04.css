@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+body {
+    background: #333;
+}
+
+.shoes {
+    padding: 100px 0;
+}
+
+.shoes .case {
+    position: relative;
+    width: 809px;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.shoes .case>ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+/* .shoes .num {
+    text-align: center;
+} */
+
+.shoes .num {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.face {
+    padding: 50px 0;
+}
+
+.face .face_box {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.face .face_box ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.face .face_box ul li {
+    border: 1px solid #333;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-top: 0;
+    border-left: 0;
+}
+
+.face .face_box ul li.eye {
+    top: 150px;
+    transform: rotate(45deg);
+}
+
+.face .face_box ul li.eye_left {
+    left: 150px;
+}
+
+.face .face_box ul li.eye_right {
+    right: 150px;
+}
+
+.face .face_box ul li.rip {
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+}
+
+.face .face_box ul li.rip span {
+    display: block;
+    transform: rotate(45deg);
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+    border-bottom: 0;
+    border-right: 0
+}
+
+.face .face_box ul.on li.eye,
+.face .face_box ul.on li.rip span {
+    transform: rotate(225deg);
+}

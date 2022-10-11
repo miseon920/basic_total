@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+.header {
+    background: #ddd;
+    line-height: 100px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header .container ul {
+    display: flex;
+    gap: 40px;
+}
+
+.visual {
+    height: 600px;
+    background: #333;
+    color: #fff;
+    line-height: 600px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    line-height: 100px;
+    background: #ddd;
+}
+
+.mopen {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background: pink;
+    display: none;
+}
+
+.mopen span {
+    display: block;
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: #333;
+}
+
+.mopen span:first-child {
+    top: 5px;
+}
+
+.mopen span:nth-child(2) {
+    top: 14px;
+}
+
+.mopen span:nth-child(3) {
+    top: 14px;
+}
+
+.mopen span:last-child {
+    bottom: 5px
+}
+
+@media (max-width:1000px) {
+    .header {
+        background: #fff;
+        line-height: 100px;
+    }
+
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .header .container ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        line-height: 40px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: calc(100% - 90px);
+        height: 100vh;
+        background: #ff0;
+        z-index: 1;
+        transition: left 0.5s;
+    }
+
+    nav.on {
+        left: 0;
+    }
+
+    .visual {
+        height: 600px;
+        background: #333;
+        color: #fff;
+        line-height: 600px;
+        text-align: center;
+    }
+
+    .footer {
+        text-align: center;
+        line-height: 100px;
+        background: #ddd;
+    }
+
+    .mopen {
+        display: block;
+    }
+
+    .mopen span {
+        display: block;
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        height: 2px;
+        background: #333;
+    }
+
+    .mopen.on span:first-child,
+    .mopen.on span:last-child {
+        display: none;
+    }
+
+    .mopen.on span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .mopen.on span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+}
+
+/*@media screen and (max-width:768px) {
+    .header {
+        color: red;
+    }
+
+    .mopen {
+        display: block;
+    }
+}*/

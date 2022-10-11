@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.basic01 {
+    padding: 100px 0;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.basic01 h2 {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.basic01 p {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.basic01 .container {
+    /* max-width: 1200px;
+    width: 100%;*/
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.basic01 .container figure {
+    /*width: 33.33%;*/
+    flex: 1;
+}
+
+.basic01 .container img {
+    width: 100%;
+}

@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.box {
+    width: 600px;
+    border: 1px solid #333;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+.box01 {
+    background: pink;
+    margin: 40px auto;
+}
+
+.box02 {
+    background: purple;
+    padding: 30px;
+}
+
+.box03 {
+    padding: 50px 0;
+    /*인라인 요소의 경우 패딩이 먹는것이 아닌대 먹는것처럼보임 - 겹쳐보이는 이슈*/
+    display: block;
+}

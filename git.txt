@@ -1,0 +1,15 @@
+*깃허브 / 깃 설치
+1)깃허브 위치 복사 후 환경변수에 시스템 변수 path에 추가하기
+2)깃 설치후 깃위치 /bin 까지 환경변수->시스템변수 path에 추가
+C:\Users\GGG\AppData\Local\GitHubDesktop
+3)cmd 에서 mkdir git (git폴더 생성) / 생성 후  C:\Users\GGG\AppData\Local\GitHubDesktop 추가해두됌
+4)git clone https://github.com/miseon920/miseon920.github.io
+예)git clone https://github.com/닉네임/Repository이름 - 깃클론생성
+4)vscode 터미널에서 푸쉬 
+#안됄시  git init 입력
+1. git add .입력 
+2. git commit -m "init git"  (""사이에는 날짜를 넣어도됨)
+3. git push origin main
+
+*깃안내서
+https://subicura.com/git/

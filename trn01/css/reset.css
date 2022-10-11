@@ -1,0 +1,45 @@
+@charset "uft-8";
+
+/* reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*notosans의 경우 font-size가 홀수일때 가독성이 좋음*/
+
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+strong,
+em {
+    font-style: normal;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+}

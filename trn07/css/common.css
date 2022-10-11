@@ -1,0 +1,367 @@
+@charset "utf-8";
+
+header {
+  text-align: center;
+}
+header h1 a {
+  display: block;
+  padding: 10px 0;
+}
+.inner {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.after::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+nav {
+  line-height: 60px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  position: relative;
+}
+header.on nav {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav > ul::after {
+  content: "";
+  display: block;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  height: 0;
+  border-top: 1px solid #ddd;
+  transition: 0.5s all;
+  z-index: 3;
+}
+nav > ul > li {
+  position: relative;
+}
+nav > ul > li a {
+  font-size: 18px;
+  color: #000;
+}
+nav .submenu {
+  position: absolute;
+  width: 150px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s all;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  z-index: 4;
+}
+nav .submenu ul {
+  padding: 20px 0;
+}
+nav .submenu a {
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+}
+nav > ul:hover::after,
+nav > ul:hover .submenu {
+  height: 150px;
+}
+.visual {
+  position: relative;
+  overflow: hidden;
+}
+.visual .visual_txt {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.visual img {
+  width: 100%;
+}
+.vt_inner {
+  float: right;
+  text-align: center;
+}
+.vt_inner h2 {
+  padding-bottom: 30px;
+}
+.vt_inner h2 span {
+  display: block;
+  font-size: 60px;
+  color: #fff;
+}
+.vt_inner h2 span:first-child {
+  font-weight: 500;
+}
+.vt_inner h2 span:last-child {
+  font-weight: 700;
+}
+.m_c {
+  color: #ffff00;
+}
+.vt_inner p {
+  font-size: 16px;
+  color: #fff;
+}
+section:not(.visual) {
+  padding: 100px 0;
+}
+section:not(.visual) h2 {
+  font-size: 25px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+section:not(.visual) h2::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 30px;
+  background: #f18a31;
+  margin-right: 10px;
+}
+.adopt .content {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 5px;
+}
+.adopt .swiper-container {
+  width: 750px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.adopt .swiper-slide {
+  width: 300px;
+}
+.adopt .swiper-slide.swiper-slide-active {
+  transform: translateY(-100px);
+  transition: 0.5s all;
+}
+.adopt .swiper-slide > a {
+  display: block;
+}
+.adopt .con_img {
+  overflow: hidden;
+}
+.adopt .swiper-slide > a:hover .con_img img {
+  transform: scale(1.2);
+  transition: 0.5s all;
+}
+.adopt .con_img img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+.adopt .con_txt {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 30px 40px;
+}
+.con_ca {
+  display: flex;
+  align-items: center;
+}
+.con_ca img {
+  margin-right: 15px;
+}
+.con_ca span {
+  font-weight: 500;
+  font-size: 16px;
+}
+.con_tit {
+  margin: 30px 0 15px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #555;
+}
+.con_txt2 {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.2;
+}
+.con_date {
+  font-size: 16px;
+  color: #999;
+  padding-top: 20px;
+}
+.sl_bt {
+  width: 95px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.sl_bt > div {
+  position: static;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  margin-top: 0;
+}
+.sl_bt > div::after {
+  display: none;
+}
+.sl_bt i {
+  font-size: 25px;
+}
+.con_tab {
+  max-width: 585px;
+  width: 100%;
+  margin: 0 auto 60px;
+}
+.con_tab ul {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+.con_tab ul li {
+  flex: 1;
+  border-right: 1px solid #ddd;
+}
+.con_tab ul li:last-child {
+  border-right: 0;
+}
+.con_tab ul li a {
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 20px;
+  color: #999;
+}
+.con_tab ul li a img {
+  opacity: 0.5;
+  margin-right: 15px;
+}
+.con_tab ul li.on a img {
+  opacity: 1;
+}
+.con_tab ul li.on a {
+  color: #333;
+}
+.protect .real_con {
+  display: none;
+}
+.protect .real_con.on {
+  display: block;
+}
+.protect .swiper-slide {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.protect .swiper-slide > * {
+  /* flex: 1; */
+  width: 50%;
+}
+.protect .con_left {
+  padding: 0 50px;
+}
+.protect .con_right img {
+  width: 100%;
+  max-height: 545px;
+  object-fit: cover;
+}
+.swiper_P {
+  position: relative;
+}
+.swiper_P .sl_bt {
+  bottom: auto;
+  top: 30px;
+  left: calc(50% - 87.5px);
+}
+.support .contaoiner {
+  display: flex;
+  gap: 30px;
+}
+.support .contaoiner > div {
+  width: 50%;
+}
+.support img {
+  width: 100%;
+}
+.support .con_left,
+.support .con_ll ul {
+  display: flex;
+  justify-content: space-between;
+}
+.support .con_ll ul {
+  flex-direction: column;
+  gap: 30px;
+}
+.support .con_right {
+  background: #f18a31 url(../img/con0304.png) no-repeat center bottom;
+  padding-top: 30px;
+}
+.support .con_right .con_bg {
+  padding: 0 84px;
+}
+.support .con_right .con_bg h3,
+.support .con_right .support_info span {
+  color: #fff;
+  font-weight: 700;
+}
+.support .con_right h3 {
+  font-size: 50px;
+  padding-bottom: 40px;
+}
+.support .con_right .support_info li {
+  line-height: 1.2;
+}
+.support .con_right .support_info span {
+  font-size: 25px;
+}
+.support .con_right .support_info span:first-child {
+  color: #ffff00;
+}
+footer {
+  background: #333;
+  padding: 30px 0 60px;
+}
+footer * {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+}
+footer ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+footer ul li:last-child {
+  margin-right: 0;
+}
+footer .foot_sns {
+  padding: 30px 0 25px;
+}
+footer .foot_sns li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000;
+}
+footer .foot_info {
+  line-height: 1.2;
+}
+footer .copy {
+  padding-top: 15px;
+}

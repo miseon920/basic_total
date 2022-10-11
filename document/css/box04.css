@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+.header01 {
+    display: flex;
+}
+
+h1 {
+    line-height: 100px;
+    background: #f00;
+}
+
+nav {
+    line-height: 100px;
+    background: pink;
+}
+
+.right {
+    line-height: 100px;
+    background: purple;
+}
+
+.header02 {
+    display: flex;
+    /*
+      justify-content: flex-start;
+      justify-content: flex-end;
+    */
+    justify-content: center;
+}
+
+.header03 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header04 {
+    display: flex;
+    justify-content: space-between;
+    /*
+    space-between 3개 정렬시
+    정중앙이아님 양 사이값을 같게 할뿐이다.
+    */
+}
+
+.header05 {
+    display: flex;
+}
+
+.header05 nav {
+    margin-left: auto;
+
+}
+
+.basic {
+    line-height: 100px;
+}
+
+.basic .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.basic nav {
+    margin-left: auto;
+}
+
+.basic nav ul {
+    display: flex;
+    gap: 30px;
+    /*li 사이 간격 */
+}
+
+.basic .icon {
+    margin-left: 30px;
+}
